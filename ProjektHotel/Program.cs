@@ -11,6 +11,10 @@ namespace ProjektHotel
     {
         static void Main(string[] args)
         {
+            //
+            //
+            // to jest kurwa dramat 
+
             Klient klient1 = new Klient("Lucjan", "Nowak", "luceknowa.k@wp.com", "123456789", "1980-02-12", Klient.Tytul.Pan);
             Klient klient2 = new Klient("Jan", "Kowalski", "lucek.nowak@gmail.com", "234567898", "1970-12-11", Klient.Tytul.Pan);
             Apartament apartament1 = new Apartament(Pokoj.Miejsce.DwaOs);
