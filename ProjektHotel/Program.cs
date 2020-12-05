@@ -11,9 +11,7 @@ namespace ProjektHotel
     {
         static void Main(string[] args)
         {
-            //
-            //
-            // to jest kurwa dramat 
+            
 
             Klient klient1 = new Klient("Lucjan", "Nowak", "luceknowa.k@wp.com", "123456789", "1980-02-12", Klient.Tytul.Pan);
             Klient klient2 = new Klient("Jan", "Kowalski", "lucek.nowak@gmail.com", "234567898", "1970-12-11", Klient.Tytul.Pan);
@@ -31,18 +29,6 @@ namespace ProjektHotel
             Rezerwacja rezerwacja2 = new Rezerwacja(new DateTime(2020, 12, 4), new DateTime(2020, 12, 10), apartament1, klient2, Rezerwacja.FormaPłatności.Karta);
             //Rezerwacja rezerwacja3 = new Rezerwacja();
             
-            // CHYBA TY
-            // 70 MLN SASINA
-
-           //1234567890
-
-           //dramat3
-
-            //SPRAWDZAM CZY TOOOOOOOOOOOOOOOOOOOOOOOO DZIAKLALLAL
-            // kocham Iwonke! <3
-            //dramat
-            //dramat2
-            // this is it
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
            
