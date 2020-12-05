@@ -29,8 +29,11 @@ namespace ProjektHotel
             
             // CHYBA TY
             // 70 MLN SASINA
-           
+           //1234567890
             // kocham Iwonke! <3
+            //dramat
+            //dramat2
+            // this is it
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
            
