@@ -1,0 +1,37 @@
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.deps.json
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.json
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.dev.json
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csprojAssemblyReference.cache
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfoInputs.cache
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csproj.CoreCompileInputs.cache
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Karol\source\repos\ProjektHotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.genruntimeconfig.cache
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.deps.json
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.json
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.dev.json
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\wiola\Downloads\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csprojAssemblyReference.cache
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfoInputs.cache
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csproj.CoreCompileInputs.cache
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\wiola\Downloads\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.genruntimeconfig.cache
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.deps.json
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.json
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.dev.json
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\obj\Debug\netcoreapp3.1\ProjektHotel.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\obj\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Dell\Desktop\STUDIA\3 semestr\PO\ProjektHotelWiola\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
