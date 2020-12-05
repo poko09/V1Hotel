@@ -31,6 +31,8 @@ namespace ProjektHotel
             // 70 MLN SASINA
            
             // kocham Iwonke! <3
+            //dramat
+            //dramat2
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
            
