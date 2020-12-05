@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\agata\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\Repos\\V1Hotel\\ProjektHotelWiola\\ProjektHotel.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\source\\githubrepos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
       "projectName": "ProjektHotel",
-      "projectPath": "C:\\Source\\Repos\\V1Hotel\\ProjektHotelWiola\\ProjektHotel.csproj",
-      "packagesPath": "C:\\Users\\agata\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\Repos\\V1Hotel\\ProjektHotelWiola\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\source\\githubrepos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\source\\githubrepos\\V1Hotel\\ProjektHotel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\agata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
