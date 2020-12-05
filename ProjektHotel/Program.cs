@@ -29,7 +29,12 @@ namespace ProjektHotel
             
             // CHYBA TY
             // 70 MLN SASINA
+
+           //1234567890
+
            //dramat3
+
+            //SPRAWDZAM CZY TOOOOOOOOOOOOOOOOOOOOOOOO DZIAKLALLAL
             // kocham Iwonke! <3
             //dramat
             //dramat2
