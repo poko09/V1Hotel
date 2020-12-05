@@ -33,6 +33,7 @@ namespace ProjektHotel
             // kocham Iwonke! <3
             //dramat
             //dramat2
+            // this is it
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
            
