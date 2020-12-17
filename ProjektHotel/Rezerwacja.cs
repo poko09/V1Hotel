@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace ProjektHotel
@@ -27,13 +28,20 @@ namespace ProjektHotel
 
         public Rezerwacja(DateTime dataZameldowania, DateTime dataWymeldowania, Pokoj pokoj, Klient klient, FormaPłatności formaPłatności)
         {
-            this.dataZameldowania = dataZameldowania;
-            this.dataWymeldowania = dataWymeldowania;
-            this.pokoj = pokoj;
-            this.klient = klient;
-            this.formaPłatności = formaPłatności;
-            this.nrRezerwacji = ++bieżącyNumerRezerwacji;
-            this.koszt = pokoj.cena * (int)(dataWymeldowania.Day - dataZameldowania.Day);
+            if (dataZameldowania < dataWymeldowania)
+            {
+                this.dataZameldowania = dataZameldowania;
+                this.dataWymeldowania = dataWymeldowania;
+                this.pokoj = pokoj;
+                this.klient = klient;
+                this.formaPłatności = formaPłatności;
+                this.nrRezerwacji = ++bieżącyNumerRezerwacji;
+                this.koszt = pokoj.cena * (int)(dataWymeldowania.Day - dataZameldowania.Day);
+            }
+            else
+            {
+                throw new Exception("Data zameldowania musi być wcześniejsza niż data wymeldowania.");
+            }
         }
 
         public int IleDni(DateTime dataZameldowania, DateTime dataWymeldowania)
