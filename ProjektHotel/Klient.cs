@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProjektHotel
 {
 
-    class Klient
+    class Klient :IEquatable<Klient>, IComparable<Klient>
     {
         public enum Tytul { Pani, Pan };
         ulong id = 0;
@@ -17,18 +18,20 @@ namespace ProjektHotel
         string email;
         string telefon;
         DateTime dataUrodzenia;
+        string pesel;
         Tytul tytul;
 
         public static ulong bieżącyNumerKlienta = 0;
 
 
-        public Klient(string imie, string nazwisko, string email, string telefon, string dataUrodzenia, Tytul tytul)
+        public Klient(string imie, string nazwisko, string email, string telefon, string dataUrodzenia, string pesel, Tytul tytul)
         {
             Imie = imie;
             Nazwisko = nazwisko;
             Email = email;
             Telefon = telefon;
             DateTime.TryParse(dataUrodzenia, out this.dataUrodzenia);
+            this.Pesel = pesel;
             this.tytul = tytul;
             this.id = ++bieżącyNumerKlienta;
         }
@@ -117,16 +120,45 @@ namespace ProjektHotel
                 }
             }
         }
+
+        public string Pesel
+        {
+            get => pesel;
+            set
+            {
+                Regex wzorzec = new Regex("^\\d{11}$");
+                if (wzorzec.IsMatch(value))
+                {
+                    pesel = value;
+                }
+                else
+                {
+                    throw new Exception("bledny pesel");
+                }
+            }
+        }
+
         public int Wiek()
         {
             return (int)DateTime.Today.Year - dataUrodzenia.Year;
         }
-                                        
+
         public override string ToString()
         {
-            return "Klient " + this.id + "\nImie " + imie + " nazwisko " + nazwisko + " email " + email + " " + telefon + " data urodzenia " + dataUrodzenia+  " " + tytul;
+            return "Klient " + this.id + "\nImie " + imie + " nazwisko " + nazwisko + " email " + email + " " + telefon + " data urodzenia " + dataUrodzenia + " pesel " + pesel + " Tytuł " + tytul;
         }
 
-        //ROBIE SE ZMIANEW W KLIENCIE PLS POPWIEDZCIE ZE TO WIDZICIE
+        public bool Equals(Klient other)
+        {
+            return this.Pesel == other.Pesel;
+        }
+
+        public int CompareTo(Klient other)
+        {
+            if (this.Nazwisko != other.Nazwisko)
+                return this.Nazwisko.CompareTo(other.Nazwisko);
+            else
+                return this.Imie.CompareTo(other.Imie);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace ProjektHotel
@@ -28,5 +29,7 @@ namespace ProjektHotel
         {
             return "Nr pokoju: " + nrPokoju + ", Ilość osób: " + this.Miejsce1.ToString();
         }
+
+        
     }
 }

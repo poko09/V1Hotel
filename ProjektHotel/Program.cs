@@ -13,8 +13,9 @@ namespace ProjektHotel
         {
             
 
-            Klient klient1 = new Klient("Lucjan", "Nowak", "luceknowa.k@wp.com", "123456789", "1980-02-12", Klient.Tytul.Pan);
-            Klient klient2 = new Klient("Jan", "Kowalski", "lucek.nowak@gmail.com", "234567898", "1970-12-11", Klient.Tytul.Pan);
+            Klient klient1 = new Klient("Lucjan", "Nowak", "luceknowa.k@wp.com", "123456789", "1980-02-12","80021213344", Klient.Tytul.Pan);
+            Klient klient2 = new Klient("Jan", "Kowalski", "lucek.nowak@gmail.com", "234567898", "1970-12-11", "70121112345", Klient.Tytul.Pan);
+            Klient klient3 = new Klient("Jan", "Kowal", "lucek.nowak@gmail.com", "234567898", "1970-12-11", "70121112345", Klient.Tytul.Pan);
             Apartament apartament1 = new Apartament(Pokoj.Miejsce.DwaOs);
             PokojBasic basic1 = new PokojBasic(Pokoj.Miejsce.CzteryOs);
             PokojBasic basic2 = new PokojBasic(Pokoj.Miejsce.DwaOs);
@@ -31,9 +32,14 @@ namespace ProjektHotel
             
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
-           
-            // kom na branch2
 
+            ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
+            zarzadzanie.DodajKlienta(klient1);
+            zarzadzanie.DodajKlienta(klient2);
+
+            zarzadzanie.SortujKlientow();
+
+            Console.WriteLine(zarzadzanie);
         }
     }
 }
