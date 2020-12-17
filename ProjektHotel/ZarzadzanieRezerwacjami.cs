@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ProjektHotel
 {
+    //kjhfbjdfb
     class ZarzadzanieRezerwacjami
     {
         List<Klient> klienci;
