@@ -126,5 +126,7 @@ namespace ProjektHotel
         {
             return "Klient " + this.id + "\nImie " + imie + " nazwisko " + nazwisko + " email " + email + " " + telefon + " data urodzenia " + dataUrodzenia+  " " + tytul;
         }
+
+        //ROBIE SE ZMIANEW W KLIENCIE PLS POPWIEDZCIE ZE TO WIDZICIE
     }
 }
