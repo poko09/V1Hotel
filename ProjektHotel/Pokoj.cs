@@ -5,7 +5,7 @@ using System.Text;
 namespace ProjektHotel
 {
 
-    abstract class Pokoj
+    public abstract class Pokoj
     {
 
         public uint nrPokoju = 0;

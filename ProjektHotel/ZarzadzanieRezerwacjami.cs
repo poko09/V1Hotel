@@ -6,5 +6,7 @@ namespace ProjektHotel
 {
     class ZarzadzanieRezerwacjami
     {
+        //private List<>()
+        ///asdasdasda
     }
 }

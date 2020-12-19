@@ -32,7 +32,7 @@ namespace ProjektHotel
             Console.WriteLine(rezerwacja1.ToString());
             Console.WriteLine(rezerwacja2.ToString());
            
-            // kom na branch2
+            //komentarz
 
         }
     }

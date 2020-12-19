@@ -14,7 +14,7 @@ namespace ProjektHotel
         }
         public override string ToString()
         {
-            return base.ToString() + ", Typ pokoju: " + "Apartament" + ", Cena za dobę: " + this.cena;
+            return base.ToString() + ", Typ pokoju: " + nameof(Apartament) + ", Cena za dobę: " + this.cena;
         }
 
     }
