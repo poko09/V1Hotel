@@ -111,5 +111,8 @@ namespace ProjektHotel
         {
             klienci.Sort();
         }
+        ///// TERAZ KAROL ROBI COS W SWOJEJ BRANCHY 
+        /////ASDASDAS
+        ///
     }
 }
