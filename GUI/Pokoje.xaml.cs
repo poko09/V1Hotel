@@ -9,19 +9,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ProjektHotel;
 
 namespace GUI
 {
     /// <summary>
-    /// Logika interakcji dla klasy StronaGłówna.xaml
+    /// Logika interakcji dla klasy Pokoje.xaml
     /// </summary>
-    public partial class StronaGłówna : Window
+    public partial class Pokoje : Window
     {
-        public StronaGłówna()
+        public Pokoje()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -5,16 +5,21 @@ using System.Text;
 
 namespace ProjektHotel
 {
-    class Apartament : Pokoj
+    [Serializable]
+    public class Apartament : Pokoj
     {
         static double stawka= 100;
+
+        public Apartament() { }
         public Apartament(Miejsce miejsce) : base(miejsce)
         {
-            this.cena = stawka * (int)Miejsce1;
+            this.Cena = Stawka * (int)Miejsce1;
         }
+        public static double Stawka { get => stawka; set => value = stawka; }
+
         public override string ToString()
         {
-            return base.ToString() + ", Typ pokoju: " + "Apartament" + ", Cena za dobę: " + this.cena;
+            return base.ToString() + ", Typ pokoju: " + "Apartament" + ", Cena za dobę: " + this.Cena;
         }
 
     }

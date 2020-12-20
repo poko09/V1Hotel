@@ -1,20 +1,20 @@
 ﻿GUI
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Users\Dell\source\githubrepos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
+C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
 GUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Dell\source\githubrepos\V1Hotel\GUI\App.xaml
-21729623410
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\wiola\source\repos\V1Hotel\GUI\App.xaml
+31692822832
 
-51243428205
-1921654412462
-MainWindow.xaml;StronaGłówna.xaml;
+7722497204
+193-1618248890
+MainWindow.xaml;Pokoje.xaml;StronaGłówna.xaml;
 
-True
+False
 

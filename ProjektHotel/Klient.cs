@@ -9,7 +9,8 @@ using System.Diagnostics.CodeAnalysis;
 namespace ProjektHotel
 {
 
-    class Klient :IEquatable<Klient>, IComparable<Klient>
+    [Serializable]
+    public class Klient :IEquatable<Klient>, IComparable<Klient>
     {
         public enum Tytul { Pani, Pan };
         ulong id = 0;
@@ -23,7 +24,7 @@ namespace ProjektHotel
 
         public static ulong bieżącyNumerKlienta = 0;
 
-
+        public Klient() { }
         public Klient(string imie, string nazwisko, string email, string telefon, string dataUrodzenia, string pesel, Tytul tytul)
         {
             Imie = imie;
@@ -32,7 +33,7 @@ namespace ProjektHotel
             Telefon = telefon;
             DateTime.TryParse(dataUrodzenia, out this.dataUrodzenia);
             this.Pesel = pesel;
-            this.tytul = tytul;
+            this.Tytul1 = tytul;
             this.id = ++bieżącyNumerKlienta;
         }
 
@@ -102,24 +103,24 @@ namespace ProjektHotel
                 }
             }
         }
+        public DateTime DataUrodzenia { get => dataUrodzenia; set => dataUrodzenia = value; }
 
-
-        public DateTime DataUrodzenia //*BLAD* Naprawic blad z DATETIME data urodzenia
-        {
-            get { return dataUrodzenia; }
-            set
-            {
-                Regex wzor = new Regex("{0:d/M/yyyy HH:mm:ss}");
-                if (wzor.IsMatch(Convert.ToDateTime(value).ToString()))
-                {
-                    dataUrodzenia = value;
-                }
-                else
-                {
-                    throw new Exception("blad");
-                }
-            }
-        }
+        /*  public DateTime DataUrodzenia //*BLAD* Naprawic blad z DATETIME data urodzenia
+          {
+              get { return dataUrodzenia; }
+              set
+              {
+                  Regex wzor = new Regex("{0:d/M/yyyy HH:mm:ss}");
+                  if (wzor.IsMatch(Convert.ToDateTime(value).ToString()))
+                  {
+                      dataUrodzenia = value;
+                  }
+                  else
+                  {
+                      throw new Exception("blad z datetime");
+                  }
+              }
+          }*/
 
         public string Pesel
         {
@@ -138,6 +139,7 @@ namespace ProjektHotel
             }
         }
 
+        public Tytul Tytul1 { get => tytul; set => tytul = value; }
         public int Wiek()
         {
             return (int)DateTime.Today.Year - dataUrodzenia.Year;
@@ -145,7 +147,7 @@ namespace ProjektHotel
 
         public override string ToString()
         {
-            return "Klient " + this.id + "\nImie " + imie + " nazwisko " + nazwisko + " email " + email + " " + telefon + " data urodzenia " + dataUrodzenia + " pesel " + pesel + " Tytuł " + tytul;
+            return "Klient " + this.id + "\nImie " + imie + " nazwisko " + nazwisko + " email " + email + " " + telefon + " data urodzenia " + dataUrodzenia.ToString("dd.MM.yyyy") + " pesel " + pesel + " Tytuł " + Tytul1;
         }
 
         public bool Equals(Klient other)
