@@ -24,5 +24,21 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void buttonZaloguj_Click(object sender, RoutedEventArgs e)
+        {
+            if(textBoxLogin.Text=="hotel" && textBoxHasło.Text=="zarzadzanie")
+            {
+                new StronaGłówna().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Błędne hasło lub login");
+                textBoxLogin.Clear();
+                textBoxHasło.Clear();
+                textBoxLogin.Focus();
+            }
+        }
     }
 }

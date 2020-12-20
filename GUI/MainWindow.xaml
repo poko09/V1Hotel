@@ -24,11 +24,12 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Login" FontSize="20"/>
-        <TextBlock Grid.Column="1" Grid.Row="4" Text="Hasło" FontSize="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Login" FontSize="20" Margin="0,0,20,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Hasło" FontSize="20" Margin="0,0,20,0"/>
 
-        <TextBox x:Name="textBoxLogin" Grid.Row="2" Grid.Column="3" Width="150"/>
-        <TextBox x:Name="textBoxHasło" Grid.Row="4" Grid.Column="3" Width="150"/>
+        <TextBox x:Name="textBoxLogin" Grid.Row="2" Grid.Column="3" Width="130"/>
+        <TextBox x:Name="textBoxHasło" Grid.Row="4" Grid.Column="3" Width="130" Visibility="Visible"/>
 
+        <Button x:Name="buttonZaloguj" Content="Zaloguj" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Click="buttonZaloguj_Click"/>
     </Grid>
 </Window>
