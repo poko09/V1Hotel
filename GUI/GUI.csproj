@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="hotel.jpg" />
+    <None Remove="login.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="hotel.jpg" />
+    <Resource Include="login.png" />
+  </ItemGroup>
+
+</Project>
