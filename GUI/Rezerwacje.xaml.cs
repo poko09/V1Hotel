@@ -13,19 +13,13 @@ using System.Windows.Shapes;
 namespace GUI
 {
     /// <summary>
-    /// Logika interakcji dla klasy StronaGłówna.xaml
+    /// Logika interakcji dla klasy Rezerwacje.xaml
     /// </summary>
-    public partial class StronaGłówna : Window
+    public partial class Rezerwacje : Window
     {
-        public StronaGłówna()
+        public Rezerwacje()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            new Rezerwacje().Show();
-            this.Hide();
         }
     }
 }

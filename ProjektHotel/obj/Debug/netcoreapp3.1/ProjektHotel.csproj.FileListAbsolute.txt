@@ -46,3 +46,14 @@ C:\Users\Dell\source\githubrepos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\Pr
 C:\Users\Dell\source\githubrepos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
 C:\Users\Dell\source\githubrepos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
 C:\Users\Dell\source\githubrepos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.deps.json
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.json
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.dev.json
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Source\Repos\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Source\Repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csprojAssemblyReference.cache
+C:\Source\Repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfoInputs.cache
+C:\Source\Repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
+C:\Source\Repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Source\Repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
