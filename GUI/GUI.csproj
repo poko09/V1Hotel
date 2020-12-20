@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="hotel.jpg" />
     <None Remove="login.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="hotel.jpg" />
     <Resource Include="login.png" />
   </ItemGroup>
 
