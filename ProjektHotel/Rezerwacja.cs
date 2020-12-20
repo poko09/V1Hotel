@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ProjektHotel
 {
-    class Rezerwacja
+    [Serializable]
+    public class Rezerwacja
     {
         uint nrRezerwacji = 0;
         double koszt;
@@ -21,10 +22,11 @@ namespace ProjektHotel
         public double Koszt { get => koszt; set => koszt = value; }
         public DateTime DataZameldowania { get => dataZameldowania; set => dataZameldowania = value; }
         public DateTime DataWymeldowania { get => dataWymeldowania; set => dataWymeldowania = value; }
-        internal Pokoj Pokoj { get => pokoj; set => pokoj = value; }
-        internal Klient Klient { get => klient; set => klient = value; }
-        internal FormaPłatności FormaPłatności1 { get => formaPłatności; set => formaPłatności = value; }
+        public Pokoj Pokoj { get => pokoj; set => pokoj = value; }
+        public Klient Klient { get => klient; set => klient = value; }
+        public FormaPłatności FormaPłatności1 { get => formaPłatności; set => formaPłatności = value; }
 
+        public Rezerwacja() { }
         public Rezerwacja(DateTime dataZameldowania, DateTime dataWymeldowania, Pokoj pokoj, Klient klient, FormaPłatności formaPłatności)
         {
             this.dataZameldowania = dataZameldowania;
@@ -33,26 +35,26 @@ namespace ProjektHotel
             this.klient = klient;
             this.formaPłatności = formaPłatności;
             this.nrRezerwacji = ++bieżącyNumerRezerwacji;
-            this.koszt = pokoj.cena * (int)(dataWymeldowania.Day - dataZameldowania.Day);
+            this.koszt = pokoj.Cena * IleDni(this.dataZameldowania,this.dataWymeldowania);
         }
 
         public int IleDni(DateTime dataZameldowania, DateTime dataWymeldowania)
         {
             int dni = 0;
-            dni = (int)(dataWymeldowania.Day - dataZameldowania.Day);
+            TimeSpan interval = dataWymeldowania - dataZameldowania;
+            dni = interval.Days;
             return dni;
         }
-
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Nr rezerwacji: " + this.nrRezerwacji);
             sb.AppendLine("Klient: " + klient.Id);
-            sb.AppendLine("Data zameldowania: " + this.dataZameldowania);
-            sb.AppendLine("Data wymeldowania: " + this.dataWymeldowania.ToString());
+            sb.AppendLine("Data zameldowania: " + this.dataZameldowania.ToString("dd.MM.yyyy"));
+            sb.AppendLine("Data wymeldowania: " + this.dataWymeldowania.ToString("dd.MM.yyyy"));
             sb.AppendLine("Ilość nocy: " + IleDni(this.DataZameldowania, this.DataWymeldowania).ToString());
-            sb.AppendLine("Nr pokoju: " + pokoj.nrPokoju.ToString());
+            sb.AppendLine("Nr pokoju: " + pokoj.NrPokoju.ToString());
             sb.AppendLine("Koszt całkowity: " + this.koszt.ToString());
             return sb.ToString();
         }

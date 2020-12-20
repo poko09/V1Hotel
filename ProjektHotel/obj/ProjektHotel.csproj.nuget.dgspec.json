@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\Repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {}
+    "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {}
   },
   "projects": {
-    "C:\\Source\\Repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {
+    "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\Repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
+        "projectUniqueName": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
         "projectName": "ProjektHotel",
-        "projectPath": "C:\\Source\\Repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
-        "packagesPath": "C:\\Users\\agata\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\Repos\\V1Hotel\\ProjektHotel\\obj\\",
+        "projectPath": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj",
+        "packagesPath": "C:\\Users\\wiola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\agata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wiola\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

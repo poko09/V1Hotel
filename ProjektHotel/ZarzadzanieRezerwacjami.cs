@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ProjektHotel
 {
-    class ZarzadzanieRezerwacjami
+    [Serializable]
+    public class ZarzadzanieRezerwacjami
     {
         List<Rezerwacja> rezerwacje;
         List<Klient> klienci;
+        List<Pokoj> pokoje;
         int liczbaKlientow;
 
         public List<Klient> Klienci { get => klienci; set => klienci = value; }
         public int LiczbaKlientow { get => liczbaKlientow; set => liczbaKlientow = value; }
-        internal List<Rezerwacja> Rezerwacje { get => rezerwacje; set => rezerwacje = value; }
+        public List<Rezerwacja> Rezerwacje { get => rezerwacje; set => rezerwacje = value; }
+        public List<Pokoj> Pokoje { get => pokoje; set => pokoje = value; }
 
         public ZarzadzanieRezerwacjami()
         {
             this.Rezerwacje = new List<Rezerwacja>();
             klienci = new List<Klient>();
+            pokoje = new List<Pokoj>();
             liczbaKlientow = 0;
         }
 
@@ -91,13 +97,24 @@ namespace ProjektHotel
             Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
         }
 
+        public void DodajPokoj(Pokoj pokoj)
+        {
+            pokoje.Add(pokoj);
+        }
+
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder("HOTEL \n");
+         //   stringBuilder.AppendLine("Liczba klientów: "+liczbaKlientow);
             stringBuilder.AppendLine("Klienci: ");
             foreach (Klient klient in klienci)
             {
                 stringBuilder.AppendLine(klient.ToString());
+            }
+            stringBuilder.AppendLine("Pokoje: ");
+            foreach (Pokoj pokoj in Pokoje)
+            {
+                stringBuilder.AppendLine(pokoj.ToString());
             }
             stringBuilder.AppendLine("Rezerwacje: ");
             foreach (Rezerwacja rezerwacja in Rezerwacje)
@@ -111,8 +128,29 @@ namespace ProjektHotel
         {
             klienci.Sort();
         }
+
         ///// TERAZ KAROL ROBI COS W SWOJEJ BRANCHY 
         /////ASDASDAS
         ///
+
+        static Type[] types = new Type[] { typeof(Apartament), typeof(PokojBasic), typeof(PokojPremium) };
+        public void ZapiszXML(string nazwa)
+        {
+            using (StreamWriter writer = new StreamWriter(nazwa))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ZarzadzanieRezerwacjami),types);
+                serializer.Serialize(writer, this);
+            }
+        }
+
+        public static ZarzadzanieRezerwacjami OdczytajXML(string nazwa)
+        {
+            using (StreamReader reader = new StreamReader(nazwa))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(ZarzadzanieRezerwacjami),types);
+                return serializer.Deserialize(reader) as ZarzadzanieRezerwacjami;
+            }
+        }
+
     }
 }

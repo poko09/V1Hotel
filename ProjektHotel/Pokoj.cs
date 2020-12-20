@@ -5,29 +5,31 @@ using System.Text;
 
 namespace ProjektHotel
 {
-
-    abstract class Pokoj
+    [Serializable]
+    public abstract class Pokoj
     {
 
-        public uint nrPokoju = 0;
-        public double cena;
-        public bool jestDostepny = true;
+        uint nrPokoju = 0;
+        double cena;
+        bool jestDostepny = true;
+        public static uint bieżącyNumerPokoju = 0;
         public enum Miejsce { JedenOs = 1, DwaOs = 2, TrzyOs = 3, CzteryOs = 4 };
         Miejsce miejsce;
-        internal Miejsce Miejsce1 { get => miejsce; set => miejsce = value; }
 
-        public static uint bieżącyNumerPokoju = 0;
+        public uint NrPokoju { get => nrPokoju; set => nrPokoju = value; }
+        public double Cena { get => cena; set => cena = value; }
+        public bool JestDostepny { get => jestDostepny; set => jestDostepny = value; }
+        public Miejsce Miejsce1 { get => miejsce; set => miejsce = value; }
 
-
-        protected Pokoj(Miejsce miejsce)
+        public Pokoj() { }
+        public Pokoj(Miejsce miejsce)
         {
             this.Miejsce1 = miejsce;
-            this.nrPokoju = ++bieżącyNumerPokoju;
+            this.NrPokoju = ++bieżącyNumerPokoju;
         }
-
         public override string ToString()
         {
-            return "Nr pokoju: " + nrPokoju + ", Ilość osób: " + this.Miejsce1.ToString();
+            return "Nr pokoju: " + NrPokoju + ", Ilość osób: " + this.Miejsce1.ToString();
         }
 
         
