@@ -24,12 +24,13 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Login" FontSize="20" Margin="0,0,20,0"/>
-        <TextBlock Grid.Column="1" Grid.Row="4" Text="Hasło" FontSize="20" Margin="0,0,20,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Login" FontSize="20" Margin="0,0,20,0" FontStretch="Normal" FontWeight="DemiBold"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Hasło" FontSize="20" Margin="0,0,20,0" FontWeight="DemiBold"/>
 
-        <TextBox x:Name="textBoxLogin" Grid.Row="2" Grid.Column="3" Width="130"/>
-        <TextBox x:Name="textBoxHasło" Grid.Row="4" Grid.Column="3" Width="130" Visibility="Visible"/>
+        <TextBox x:Name="textBoxLogin" Grid.Row="2" Grid.Column="3" Width="130" BorderThickness="3,3,3,3"/>
+        <PasswordBox x:Name="passwordBoxHasło" Grid.Row="4" Grid.Column="3" Width="130" PasswordChar="*" BorderThickness="3,3,3,3" ClipToBounds="True" />
 
-        <Button x:Name="buttonZaloguj" Content="Zaloguj" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Click="buttonZaloguj_Click"/>
+        <Button x:Name="buttonZaloguj" Content="Zaloguj" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Click="buttonZaloguj_Click" BorderThickness="4,4,4,4" FontWeight="DemiBold" FontStyle="Normal" FontStretch="Normal"/>
+        <Image Source="login.png" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="0,-47,0,32"/>
     </Grid>
 </Window>

@@ -27,7 +27,7 @@ namespace GUI
 
         private void buttonZaloguj_Click(object sender, RoutedEventArgs e)
         {
-            if(textBoxLogin.Text=="hotel" && textBoxHasło.Text=="zarzadzanie")
+            if(textBoxLogin.Text=="hotel" && passwordBoxHasło.Password =="zarzadzanie")
             {
                 new StronaGłówna().Show();
                 this.Hide();
@@ -36,7 +36,7 @@ namespace GUI
             {
                 MessageBox.Show("Błędne hasło lub login");
                 textBoxLogin.Clear();
-                textBoxHasło.Clear();
+                passwordBoxHasło.Clear();
                 textBoxLogin.Focus();
             }
         }
