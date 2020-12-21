@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjektHotel;
 
 namespace GUI
 {
@@ -23,6 +24,7 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
+            //ZarzadzanieRezerwacjami rezerwacjePlik = ZarzadzanieRezerwacjami.OdczytajXML("zarzadzanie.xml");
         }
 
         private void buttonZaloguj_Click(object sender, RoutedEventArgs e)

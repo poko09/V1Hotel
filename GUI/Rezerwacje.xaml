@@ -1,9 +1,10 @@
-﻿<Window x:Class="GUI.Rezerwacje"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="GUI.Rezerwacje"
         mc:Ignorable="d"
         Title="Rezerwacje" Height="500" Width="800">
     <Grid x:Name="tbDataZameldowania">
@@ -48,10 +49,13 @@
         <DatePicker x:Name="datePickerDataWymeldowania" Grid.Row="5" Grid.Column="3" Width="130"  Height="30" BorderThickness="3,3,3,3" Margin="0,8,0,0" />
         <ComboBox x:Name="cbKlient" Grid.Row="6" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0"/>
         <ComboBox x:Name="cbPokoj" Grid.Row="7" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0"/>
-        <ComboBox x:Name="cbFormaPlatnosci" Grid.Row="8" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0"/>
+        <ComboBox x:Name="cbFormaPlatnosci" Grid.Row="8" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0">
+            <System:String>Gotówka</System:String>
+            <System:String>Karta</System:String>
+        </ComboBox>
         <TextBox x:Name="tbCena" Grid.Row="9" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0"/>
 
-        <Button x:Name="btDodaj" Grid.Row="11" Grid.Column="2" Width="130" Height="30" FontWeight="Normal" Content="Dodaj" Margin="50,30,0,0"   />
+        <Button x:Name="btDodaj" Grid.Row="11" Grid.Column="2" Width="130" Height="30" FontWeight="Normal" Content="Dodaj" Margin="50,30,0,0" Click="ButtonClickDodaj"   />
         <Button x:Name="btWyczysc" Grid.Row="11" Grid.Column="3" Width="130" Height="30" FontWeight="Normal" Content="Wyczyść" Margin="0,30,50,0" />
 
 

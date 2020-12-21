@@ -59,3 +59,7 @@ C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.dll
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.pdb
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Rezerwacje.g.cs
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Rezerwacje.baml
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete

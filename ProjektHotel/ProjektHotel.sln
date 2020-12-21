@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektHotel", "ProjektHotel.csproj", "{CC0C064F-3470-446D-B85C-794CC3575097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "..\GUI\GUI.csproj", "{59200FCE-A2FD-4637-B1AF-436BDA8F31C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "..\GUI\GUI.csproj", "{59200FCE-A2FD-4637-B1AF-436BDA8F31C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC0C064F-3470-446D-B85C-794CC3575097} = {CC0C064F-3470-446D-B85C-794CC3575097}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
