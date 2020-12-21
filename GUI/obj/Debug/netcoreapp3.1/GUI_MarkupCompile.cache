@@ -4,12 +4,12 @@
 winexe
 C#
 .cs
-C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
 GUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\wiola\source\repos\V1Hotel\GUI\App.xaml
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Source\Repos\V1Hotel\GUI\App.xaml
 21729623410
 
 4-1590660660
