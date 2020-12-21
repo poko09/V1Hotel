@@ -57,3 +57,5 @@ C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.AssemblyInfoInputs.cache
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.AssemblyInfo.cs
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.dll
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.pdb
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Rezerwacje.g.cs
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Rezerwacje.baml
