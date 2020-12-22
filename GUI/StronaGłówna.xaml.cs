@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,10 +19,18 @@ namespace GUI
     /// </summary>
     public partial class StronaGłówna : Window
     {
+        ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
+        //ObservableCollection<Pokoj> listaPokoi;
         public StronaGłówna()
         {
             InitializeComponent();
+            zarzadzanie = ZarzadzanieRezerwacjami.OdczytajXML("zarzadzanie.xml");
         }
 
+        private void buttonPokoje_Click(object sender, RoutedEventArgs e)
+        {
+            Pokoje okno = new Pokoje(zarzadzanie);
+            okno.ShowDialog();
+        }
     }
 }

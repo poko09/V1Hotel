@@ -18,6 +18,8 @@ namespace ProjektHotel
             PokojBasic basic1 = new PokojBasic(Pokoj.Miejsce.CzteryOs);
             PokojBasic basic2 = new PokojBasic(Pokoj.Miejsce.DwaOs);
             PokojPremium premium1 = new PokojPremium(Pokoj.Miejsce.JedenOs);
+
+
             //Console.WriteLine(apartament1.ToString());
             //Console.WriteLine(basic1.ToString());
             //Console.WriteLine(basic2.ToString());

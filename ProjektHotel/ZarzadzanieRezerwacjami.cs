@@ -54,44 +54,42 @@ namespace ProjektHotel
             }
         }
 
-        /* to chyba mozna zakomentowac bo jest interfejs
-        public bool JestKlientem(string pesel)
+        public bool CzyDostepnyWTerminie(Pokoj pokoj, DateTime dataPoczatkowa, DateTime dataKoncowa)
         {
-            int wynik = 0;
-            foreach (Klient klient in klienci)
+            if (Rezerwacje.Exists(x => (x.Pokoj.Equals(pokoj)
+             && !(x.DataZameldowania >= dataKoncowa || x.DataWymeldowania <= dataPoczatkowa))))
             {
-                if (klient.Pesel == pesel)
-                {
-                    wynik++;
-                }
-            }
-            if (wynik == 1)
-            {
-                Console.WriteLine("jest");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("nie jest");
                 return false;
             }
+            else { return true; }
         }
-        */
 
         public void DodajRezerwacje(Rezerwacja rezerwacja)
         {
+            /* if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
+             {
+                 throw new Exception("Rezerwacja o podanym numerze już istenieje.");
+             }
+             else if (Rezerwacje.Exists(x => (x.Pokoj.Equals(rezerwacja.Pokoj)
+              && !(x.DataZameldowania >= rezerwacja.DataWymeldowania || x.DataWymeldowania <= rezerwacja.DataZameldowania))))
+             {
+                 throw new Exception("Pokoj jest juz zarezerwowany w danym terminie.");
+             }
+             else { Rezerwacje.Add(rezerwacja); }*/
+
             if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
             {
                 throw new Exception("Rezerwacja o podanym numerze już istenieje.");
             }
-            else if (Rezerwacje.Exists(x => (x.Pokoj == rezerwacja.Pokoj
-             && !(x.DataZameldowania >= rezerwacja.DataWymeldowania || x.DataWymeldowania <= rezerwacja.DataZameldowania))))
+            else if (CzyDostepnyWTerminie(rezerwacja.Pokoj, rezerwacja.DataZameldowania, rezerwacja.DataWymeldowania))
             {
+                Rezerwacje.Add(rezerwacja);
+            }
+            else {
                 throw new Exception("Pokoj jest juz zarezerwowany w danym terminie.");
             }
-            else { Rezerwacje.Add(rezerwacja); }
-        }
 
+        }
         public void UsunRezerwacje(uint numerRezerwacji)
         {
             Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
@@ -105,7 +103,7 @@ namespace ProjektHotel
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder("HOTEL \n");
-         //   stringBuilder.AppendLine("Liczba klientów: "+liczbaKlientow);
+            //stringBuilder.AppendLine("Liczba klientów: "+liczbaKlientow);
             stringBuilder.AppendLine("Klienci: ");
             foreach (Klient klient in klienci)
             {

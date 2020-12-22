@@ -44,3 +44,5 @@ C:\Users\wiola\source\repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.g.cs
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.baml
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete
+C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.g.cs
+C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.baml

@@ -29,7 +29,9 @@ namespace GUI
 
         private void buttonZaloguj_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxLogin.Text == "hotel" && passwordBoxHasło.Password == "zarzadzanie")
+            new StronaGłówna().Show();
+            this.Hide();
+            /*if (textBoxLogin.Text == "hotel" && passwordBoxHasło.Password == "zarzadzanie")
             {
                 new StronaGłówna().Show();
                 this.Hide();
@@ -40,7 +42,7 @@ namespace GUI
                 textBoxLogin.Clear();
                 passwordBoxHasło.Clear();
                 textBoxLogin.Focus();
-            }
+            }*/
         }
     }
 }

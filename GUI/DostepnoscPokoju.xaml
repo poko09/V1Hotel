@@ -1,0 +1,33 @@
+﻿<Window x:Class="GUI.DostepnoscPokoju"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="DostepnoscPokoju" Height="300" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="85*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="90*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.ColumnSpan="3" FontSize="30" Text="Sprawdź dostępność pokoju" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Medium"  Margin="51,0,0,0" Grid.Column="1" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Od:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Do:" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium"/>
+        <DatePicker x:Name="dpDataPoczatkowa" Grid.Row="1" Grid.Column="1" FontSize="20" Margin="10,20,10,20" FontWeight="Medium" />
+        <DatePicker x:Name="dpDataKoncowa" Grid.Row="1" Grid.Column="3" FontSize="20" Margin="10,20,10,20" FontWeight="Medium"/>
+        <Button x:Name="buttonSprawdz" Grid.Row="2" Content="Sprawdź dostępność w tym terminie" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="400" Grid.ColumnSpan="3"  Margin="42,0,0,0" Grid.Column="1" Click="buttonSprawdz_Click"  />
+        <Button x:Name ="buttonWroc" Content="Wróć" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonWroc_Click" />
+        <Button x:Name ="buttonWyczysc" Content="Wyczyść okna" Grid.Row="3" Grid.Column="2" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonWyczysc_Click" Grid.ColumnSpan="2" Margin="54,0,0,0" />
+
+    </Grid>
+</Window>
