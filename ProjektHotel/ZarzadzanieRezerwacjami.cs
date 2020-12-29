@@ -101,7 +101,18 @@ namespace ProjektHotel
         {
             pokoje.Add(pokoj);
         }
-
+        public void UsunPokoj(uint NrPokoju)
+        {
+            foreach(Pokoj pokoj in Pokoje)
+            {
+                if(NrPokoju == pokoj.NrPokoju)
+                {
+                    pokoje.Remove(pokoj);
+                    break;
+                }
+                
+            }
+        }
         public override string ToString()
         {
             StringBuilder stringBuilder = new StringBuilder("HOTEL \n");

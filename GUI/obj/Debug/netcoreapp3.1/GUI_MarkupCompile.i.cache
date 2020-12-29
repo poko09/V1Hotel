@@ -1,20 +1,20 @@
 ﻿GUI
-
+1.0.0.0
 
 winexe
 C#
 .cs
-C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
 GUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Source\Repos\V1Hotel\GUI\App.xaml
-3-1943088024
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\App.xaml
+41274226876
 
-61509420944
+81616697477
 1921654412462
-MainWindow.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
+Klienci.xaml;MainWindow.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
 
 False
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\Repos\\V1Hotel\\GUI\\GUI.csproj": {}
+    "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Source\\Repos\\V1Hotel\\GUI\\GUI.csproj": {
+    "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\Repos\\V1Hotel\\GUI\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Source\\Repos\\V1Hotel\\GUI\\GUI.csproj",
-        "packagesPath": "C:\\Users\\agata\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\Repos\\V1Hotel\\GUI\\obj\\",
+        "projectPath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
+        "packagesPath": "C:\\Users\\Karol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\agata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Karol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -55,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
