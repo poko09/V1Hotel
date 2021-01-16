@@ -13,11 +13,13 @@ namespace ProjektHotel
         List<Klient> klienci;
         List<Pokoj> pokoje;
         int liczbaKlientow;
+        int liczbaPokoi;
 
         public List<Klient> Klienci { get => klienci; set => klienci = value; }
         public int LiczbaKlientow { get => liczbaKlientow; set => liczbaKlientow = value; }
         public List<Rezerwacja> Rezerwacje { get => rezerwacje; set => rezerwacje = value; }
         public List<Pokoj> Pokoje { get => pokoje; set => pokoje = value; }
+        public int LiczbaPokoi { get => liczbaPokoi; set => liczbaPokoi = value; }
 
         public ZarzadzanieRezerwacjami()
         {
@@ -25,6 +27,7 @@ namespace ProjektHotel
             klienci = new List<Klient>();
             pokoje = new List<Pokoj>();
             liczbaKlientow = 0;
+            liczbaPokoi = 0;
         }
 
         public void DodajKlienta(Klient klient)
@@ -80,11 +83,14 @@ namespace ProjektHotel
 
         public void DodajRezerwacje(Rezerwacja rezerwacja)
         {
+            /*
             if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
             {
                 throw new Exception("Rezerwacja o podanym numerze już istenieje.");
             }
-            else if (Rezerwacje.Exists(x => (x.Pokoj == rezerwacja.Pokoj
+            */
+        
+            if (Rezerwacje.Exists(x => (x.Pokoj == rezerwacja.Pokoj
              && !(x.DataZameldowania >= rezerwacja.DataWymeldowania || x.DataWymeldowania <= rezerwacja.DataZameldowania))))
             {
                 throw new Exception("Pokoj jest juz zarezerwowany w danym terminie.");
@@ -100,6 +106,7 @@ namespace ProjektHotel
         public void DodajPokoj(Pokoj pokoj)
         {
             pokoje.Add(pokoj);
+            LiczbaPokoi++;
         }
 
         public override string ToString()

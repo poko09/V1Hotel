@@ -21,10 +21,13 @@ namespace GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
             //ZarzadzanieRezerwacjami rezerwacjePlik = ZarzadzanieRezerwacjami.OdczytajXML("zarzadzanie.xml");
+
+           
         }
 
         private void buttonZaloguj_Click(object sender, RoutedEventArgs e)

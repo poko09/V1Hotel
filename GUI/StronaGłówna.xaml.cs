@@ -9,7 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using ProjektHotel;
 
 
 namespace GUI
@@ -19,14 +19,18 @@ namespace GUI
     /// </summary>
     public partial class StronaGłówna : Window
     {
+        ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
         public StronaGłówna()
         {
             InitializeComponent();
+            zarzadzanie = ZarzadzanieRezerwacjami.OdczytajXML("zarzadzanie.xml");
         }
 
         private void buttonCLickRezerwacje(object sender, RoutedEventArgs e)
         {
-            new Rezerwacje().Show();
+            Rezerwacje okno = new Rezerwacje(zarzadzanie);
+            okno.ShowDialog();
+            this.Hide();
         }
     }
 }

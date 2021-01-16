@@ -56,13 +56,13 @@
         <TextBox x:Name="tbCena" Grid.Row="9" Grid.Column="3" BorderThickness="3, 3, 3, 3" Width="130" Height="30" Margin="0,8,0,0"/>
 
         <Button x:Name="btDodaj" Grid.Row="11" Grid.Column="2" Width="130" Height="30" FontWeight="Normal" Content="Dodaj" Margin="50,30,0,0" Click="ButtonClickDodaj"   />
-        <Button x:Name="btWyczysc" Grid.Row="11" Grid.Column="3" Width="130" Height="30" FontWeight="Normal" Content="Wyczyść" Margin="0,30,50,0" />
+        <Button x:Name="btWyczysc" Grid.Row="11" Grid.Column="3" Width="130" Height="30" FontWeight="Normal" Content="Wyczyść" Margin="0,30,50,0" Click="ButtonClickWyczysc"  />
 
 
         <TextBlock Grid.Row="3" Grid.Column="4" Text="Zarządzaj wprowadzonymi rezerwacjami" Margin="0,20,0,0" FontSize="20" FontStretch="Normal" VerticalAlignment="Center" FontWeight="DemiBold" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
         <ListBox x:Name="lbRezerwacje" Grid.Column="4" Grid.Row="4" Grid.RowSpan="7" Grid.ColumnSpan="3"  BorderThickness="3,3,3,3" Margin="0,8,0,0" />
-        <Button x:Name="btUsun" Grid.Row="12" Grid.Column="4" Width="130" Height="30" FontWeight="Normal" Content="Usuń" />
-        <Button x:Name="btEdytuj" Grid.Row="12" Grid.Column="5" Width="130" Height="30" FontWeight="Normal" Content="Zedytuj" />
+        <Button x:Name="btUsun" Grid.Row="12" Grid.Column="4" Width="130" Height="30" FontWeight="Normal" Content="Usuń" Click="ButtonUsun"  />
+        <Button x:Name="btEdytuj" Grid.Row="12" Grid.Column="5" Width="130" Height="30" FontWeight="Normal" Content="Zedytuj" Click="ButtonZedytuj"  />
 
     </Grid>
 </Window>
