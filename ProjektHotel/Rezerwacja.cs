@@ -7,7 +7,7 @@ namespace ProjektHotel
     [Serializable]
     public class Rezerwacja
     {
-        uint nrRezerwacji = 0;
+        uint nrRezerwacji;
         double koszt;
         DateTime dataZameldowania;
         DateTime dataWymeldowania;

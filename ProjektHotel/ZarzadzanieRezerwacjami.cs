@@ -91,12 +91,13 @@ namespace ProjektHotel
         public void DodajRezerwacje(Rezerwacja rezerwacja)
         {
 
-
+            /*
             if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
             {
                 throw new Exception("Rezerwacja o podanym numerze już istenieje.");
             }
-            else if (CzyDostepnyWTerminie(rezerwacja.Pokoj, rezerwacja.DataZameldowania, rezerwacja.DataWymeldowania))
+            */
+            if (CzyDostepnyWTerminie(rezerwacja.Pokoj, rezerwacja.DataZameldowania, rezerwacja.DataWymeldowania))
             {
                 Rezerwacje.Add(rezerwacja);
             }

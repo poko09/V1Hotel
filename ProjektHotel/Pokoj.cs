@@ -9,7 +9,7 @@ namespace ProjektHotel
     public abstract class Pokoj
     {
 
-        uint nrPokoju = 0;
+        uint nrPokoju;
         double cena;
         bool jestDostepny = true;
         public static uint bieżącyNumerPokoju = 0;
