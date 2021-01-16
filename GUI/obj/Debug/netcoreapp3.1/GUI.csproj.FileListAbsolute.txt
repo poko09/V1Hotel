@@ -96,3 +96,13 @@ C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Klienci.baml
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.baml
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Rezerwacje.baml
 C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Source\Repos\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.g.cs
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Klienci.g.cs
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.g.cs
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.baml
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Klienci.baml
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.baml
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete

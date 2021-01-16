@@ -1,20 +1,20 @@
 ﻿GUI
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\wiola\source\repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
 GUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\wiola\source\repos\V1Hotel\GUI\App.xaml
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Source\Repos\V1Hotel\GUI\App.xaml
 6-529129550
 
-10817762829
-193-1618248890
+9-270879517
+193-1835391060
 DostepnoscPokoju.xaml;Klienci.xaml;MainWindow.xaml;Pokoje.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
 
-True
+False
 

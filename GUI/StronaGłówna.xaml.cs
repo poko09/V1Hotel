@@ -33,5 +33,12 @@ namespace GUI
             okno.ShowDialog();
             this.Hide();
         }
+
+        private void buttonRezerwacje_Click(object sender, RoutedEventArgs e)
+        {
+            Rezerwacje okno = new Rezerwacje(zarzadzanie);
+            okno.ShowDialog();
+            this.Hide();
+        }
     }
 }

@@ -87,20 +87,26 @@ namespace ProjektHotel
             }
             else { return true; }
         }
-        
+
         public void DodajRezerwacje(Rezerwacja rezerwacja)
         {
+
+
             if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
             {
                 throw new Exception("Rezerwacja o podanym numerze już istenieje.");
             }
-            else if (Rezerwacje.Exists(x => (x.Pokoj == rezerwacja.Pokoj
-             && !(x.DataZameldowania >= rezerwacja.DataWymeldowania || x.DataWymeldowania <= rezerwacja.DataZameldowania))))
+            else if (CzyDostepnyWTerminie(rezerwacja.Pokoj, rezerwacja.DataZameldowania, rezerwacja.DataWymeldowania))
+            {
+                Rezerwacje.Add(rezerwacja);
+            }
+            else
             {
                 throw new Exception("Pokoj jest juz zarezerwowany w danym terminie.");
             }
-            else { Rezerwacje.Add(rezerwacja); }
+
         }
+
         /*
         public void DodajRezerwacje(Rezerwacja rezerwacja)
         {
@@ -115,7 +121,7 @@ namespace ProjektHotel
             else { Rezerwacje.Add(rezerwacja); }
         }*/
 
-            public void UsunRezerwacje(uint numerRezerwacji)
+        public void UsunRezerwacje(uint numerRezerwacji)
         {
             Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
         }
