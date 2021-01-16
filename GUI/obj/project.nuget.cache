@@ -4,5 +4,12 @@
   "success": true,
   "projectFilePath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\App.xaml
-41274226876
+6-529129550
 
-81616697477
+10817762829
 193-1355314608
-Klienci.xaml;MainWindow.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
+DostepnoscPokoju.xaml;Klienci.xaml;MainWindow.xaml;Pokoje.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
 
-True
+False
 
