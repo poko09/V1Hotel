@@ -1,0 +1,49 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="GUI.Pokoje"
+        mc:Ignorable="d"
+        Title="Pokoje" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="338*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.ColumnSpan="2" FontSize="30" Text="Zarządzanie pokojami!" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Medium" Grid.Column="1" Margin="70,0,0,0" />
+        <TextBlock Grid.Row="1" Text="Numer pokoju" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light"/>
+        <TextBlock Grid.Row="2" Text="Rodzaj pokoju" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light"/>
+        <TextBlock Grid.Row="3" Text="Liczba miejsc" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light"/>
+        <TextBox x:Name ="tbNumerPokoju" Grid.Row="1" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light" Width="130"/>
+        <ComboBox x:Name ="cmbLiczbaMiejsc" Text="liczba miejsc" Grid.Row="3" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light" Width="130">
+            <System:String>1-osobowy</System:String>
+            <System:String>2-osobowy</System:String>
+            <System:String>3-osobowy</System:String>
+            <System:String>4-osobowy</System:String>
+        </ComboBox>
+        <ComboBox x:Name = "cmbRodzajPokoju" Grid.Row="2" Grid.Column="1"  FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Light" Width="130">
+            <System:String>Apartament</System:String>
+            <System:String>Pokój Basic</System:String>
+            <System:String>Pokój Premium</System:String>
+        </ComboBox>
+        <ListBox x:Name="lbListaPokoi" Grid.Column="2"  FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Light" Height="200" Width="300" Grid.Row="1" Margin="0,27,0,0" Grid.RowSpan="4"/>
+        <Button x:Name ="buttonDodajPokoj" Content="Dodaj pokój" Grid.Row="4" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonDodajPokoj_Click" />
+        <Button x:Name ="buttonUsunPokoj" Content="Usuń pokój" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonUsunPokoj_Click" />
+        <Button x:Name ="buttonZedytuj" Content="Edytuj" Grid.Row="5" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonZedytuj_Click"/>
+        <Button x:Name ="buttonWyczysc" Content="Wyczyść wszystkie pola" Grid.Row="5" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonWyczysc_Click" />
+        <Button x:Name="buttonSprawdzDostepnosc" Grid.Column="2" Grid.Row="4" Content="Sprawdź dostępność pokoju" Height="50" Width="300" FontSize="20" FontWeight="DemiBold" Margin="75,39,74,39" Grid.RowSpan="2" Click="buttonSprawdzDostepnosc_Click" />
+
+
+    </Grid>
+</Window>

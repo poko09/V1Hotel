@@ -1,26 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ProjektHotel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ProjektHotel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjektHotel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProjektHotel/1.0.0": {
+      "type": "project",
+      "path": "../ProjektHotel/ProjektHotel.csproj",
+      "msbuildProject": "../ProjektHotel/ProjektHotel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ProjektHotel >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Karol\\.nuget\\packages\\": {}
+    "C:\\Users\\wiola\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
-      "packagesPath": "C:\\Users\\Karol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\obj\\",
+      "projectPath": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\GUI\\GUI.csproj",
+      "packagesPath": "C:\\Users\\wiola\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Karol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wiola\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {
+              "projectPath": "C:\\Users\\wiola\\source\\repos\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -63,7 +86,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

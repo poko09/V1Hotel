@@ -1,13 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Update="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="DostepnoscPokoju.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Klienci.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pokoje.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Rezerwacje.xaml.cs">
@@ -18,10 +26,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="DostepnoscPokoju.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Klienci.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pokoje.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Rezerwacje.xaml">
