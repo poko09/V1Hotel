@@ -77,7 +77,7 @@ namespace GUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GUI;component/stronag%c5%82%c3%b3wna.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GUI;V1.0.0.0;component/stronag%c5%82%c3%b3wna.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StronaGłówna.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,34 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ProjektHotel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
 namespace GUI
 {
-    
+
     /// <summary>
     /// Logika interakcji dla klasy Klienci.xaml
     /// </summary>
     public partial class Klienci : Window
     {
+        Klient _osoba;
         public Klienci()
         {
             InitializeComponent();
         }
 
-        private void tbKlient_TextChanged(object sender, TextChangedEventArgs e)
+        private void bDodaj_Click(object sender, RoutedEventArgs e)
         {
-
+            string imie = tbImie.Text;
+            string nazwisko = tbNazwisko.Text;
+            string email = tbEmail.Text;
+        }
+        public Klienci(Klient osoba) : this()
+        {
+            _osoba = osoba;
+            if (_osoba is Klient)
+            {
+                tbImie.Text = osoba.Imie;
+                tbNazwisko.Text = osoba.Nazwisko;
+                tbEmail.Text = osoba.Email;
+                tbTelefon.Text = osoba.Telefon;
+                tbPesel.Text = osoba.Pesel;
+               // ZAPYTAJ O DATE URODZENIA?????????
+                cmbTytul.Text = ((osoba.Tytul1) == Klient.Tytul.Pani) ? "Pani" : "Pan";
+            }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
         }

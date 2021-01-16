@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "ProjektHotel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ProjektHotel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjektHotel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProjektHotel/1.0.0": {
+      "type": "project",
+      "path": "../ProjektHotel/ProjektHotel.csproj",
+      "msbuildProject": "../ProjektHotel/ProjektHotel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "ProjektHotel >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Karol\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj": {
+              "projectPath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\ProjektHotel\\ProjektHotel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
