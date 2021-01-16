@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "+2wVbaqug/2r48YEjiwbm+GB0hjAztEKNTmfnMuP3NRerq4e7fFihcQp/Z046PvpyAR7AxKloDAbI71e+9o+wA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\GUI.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\Users\\Karol\\Documents\\GitHub\\V1Hotel\\GUI\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
+}

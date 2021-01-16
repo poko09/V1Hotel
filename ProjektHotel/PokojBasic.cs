@@ -4,16 +4,20 @@ using System.Text;
 
 namespace ProjektHotel
 {
-    class PokojBasic : Pokoj
+    [Serializable]
+    public class PokojBasic : Pokoj
     {
         static double stawka = 80;
+        public static double Stawka { get => stawka; set => value= stawka; }
+        public PokojBasic() { }
         public PokojBasic(Miejsce miejsce) : base(miejsce)
         {
-            this.cena = stawka * (int)Miejsce1;
+            this.Cena = Stawka * (int)Miejsce1;
         }
+
         public override string ToString()
         {
-            return base.ToString() + ", Typ pokoju: " + "Basic" +", Cena za dobę: " + this.cena;
+            return base.ToString() + ", Typ pokoju: " + nameof(PokojBasic) +", Cena za dobę: " + this.Cena;
         }
     }
 }
