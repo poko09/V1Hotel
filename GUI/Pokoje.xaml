@@ -38,11 +38,12 @@
             <System:String>Pokój Premium</System:String>
         </ComboBox>
         <ListBox x:Name="lbListaPokoi" Grid.Column="2"  FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Light" Height="200" Width="300" Grid.Row="1" Margin="0,27,0,0" Grid.RowSpan="4"/>
-        <Button x:Name ="buttonDodajPokoj" Content="Dodaj pokój" Grid.Row="4" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonDodajPokoj_Click" />
-        <Button x:Name ="buttonUsunPokoj" Content="Usuń pokój" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonUsunPokoj_Click" />
-        <Button x:Name ="buttonZedytuj" Content="Edytuj" Grid.Row="5" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonZedytuj_Click"/>
-        <Button x:Name ="buttonWyczysc" Content="Wyczyść wszystkie pola" Grid.Row="5" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="130" Click="buttonWyczysc_Click" />
+        <Button x:Name ="buttonDodajPokoj" Content="Dodaj pokój" Grid.Row="4" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="206" Click="buttonDodajPokoj_Click" />
+        <Button x:Name ="buttonUsunPokoj" Content="Usuń pokój" Grid.Row="4" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="205" Click="buttonUsunPokoj_Click" />
+        <Button x:Name ="buttonEdytuj" Content="Edytuj liczbę miejsc" Grid.Row="5" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="205" Click="buttonEdytuj_Click"/>
+        <Button x:Name ="buttonWyczysc" Content="Wyczyść wszystkie pola" Grid.Row="5" Grid.Column="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Medium" Width="206" Click="buttonWyczysc_Click" />
         <Button x:Name="buttonSprawdzDostepnosc" Grid.Column="2" Grid.Row="4" Content="Sprawdź dostępność pokoju" Height="50" Width="300" FontSize="20" FontWeight="DemiBold" Margin="75,39,74,39" Grid.RowSpan="2" Click="buttonSprawdzDostepnosc_Click" />
+
 
 
     </Grid>

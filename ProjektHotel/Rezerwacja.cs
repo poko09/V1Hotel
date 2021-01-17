@@ -7,7 +7,7 @@ namespace ProjektHotel
     [Serializable]
     public class Rezerwacja
     {
-        uint nrRezerwacji = 0;
+        uint nrRezerwacji;
         double koszt;
         DateTime dataZameldowania;
         DateTime dataWymeldowania;
@@ -36,6 +36,17 @@ namespace ProjektHotel
             this.formaPłatności = formaPłatności;
             this.nrRezerwacji = ++bieżącyNumerRezerwacji;
             this.koszt = pokoj.Cena * IleDni(this.dataZameldowania,this.dataWymeldowania);
+        }
+
+        public Rezerwacja(uint nrRezerwacji, DateTime dataZameldowania, DateTime dataWymeldowania, Pokoj pokoj, Klient klient, FormaPłatności formaPłatności)
+        {
+            this.nrRezerwacji = nrRezerwacji;
+            this.dataZameldowania = dataZameldowania;
+            this.dataWymeldowania = dataWymeldowania;
+            this.pokoj = pokoj;
+            this.klient = klient;
+            this.formaPłatności = formaPłatności;
+            this.koszt = pokoj.Cena * IleDni(this.dataZameldowania, this.dataWymeldowania);
         }
 
         public int IleDni(DateTime dataZameldowania, DateTime dataWymeldowania)
