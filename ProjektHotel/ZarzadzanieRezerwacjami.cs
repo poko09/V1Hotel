@@ -29,7 +29,7 @@ namespace ProjektHotel
 
         public void DodajKlienta(Klient klient)
         {
-            foreach (Klient klient1 in Klienci)
+            foreach (Klient klient1 in klienci)
             {
                 if (klient1.Equals(klient))
                 {

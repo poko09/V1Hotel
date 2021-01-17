@@ -63,6 +63,10 @@ namespace GUI
                 DateTime nowaDataWymeldowania = (DateTime)datePickerDataWymeldowania.SelectedDate;
                 Rezerwacja.FormaPłatności nowaForma = (cbFormaPlatnosci.Text == "Gotówka") ? Rezerwacja.FormaPłatności.Gotówka : Rezerwacja.FormaPłatności.Karta;
                 Rezerwacja nowaRezerwacja = new Rezerwacja(liczbaRezerwacjiWpliku, nowaDataZameldowania, nowaDataWymeldowania, nowyPokoj, nowyKlient, nowaForma);
+                if (nowaRezerwacja.DataZameldowania > nowaRezerwacja.DataWymeldowania   || nowaRezerwacja.DataZameldowania < DateTime.Today)
+                {
+                    MessageBox.Show("Zła data zameldowania lub wymeldowania.");
+                }
                 if (zarzadzanie.CzyDostepnyWTerminie(nowyPokoj, nowaDataZameldowania, nowaDataWymeldowania))
                 {
                     zarzadzanie.DodajRezerwacje(nowaRezerwacja);

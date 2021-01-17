@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
+C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\
 GUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\App.xaml
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Source\Repos\V1Hotel\GUI\App.xaml
 6-529129550
 
 8568118252
-193-1355314608
+193-1835391060
 DostepnoscPokoju.xaml;Klienci.xaml;MainWindow.xaml;Pokoje.xaml;Rezerwacje.xaml;StronaGłówna.xaml;
 
 False

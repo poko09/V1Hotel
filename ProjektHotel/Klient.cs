@@ -13,7 +13,7 @@ namespace ProjektHotel
     public class Klient :IEquatable<Klient>, IComparable<Klient>
     {
         public enum Tytul { Pani, Pan };
-        ulong id = 0;
+        uint id;
         string imie;
         string nazwisko;
         string email;
@@ -22,7 +22,7 @@ namespace ProjektHotel
         string pesel;
         Tytul tytul;
 
-        public static ulong bieżącyNumerKlienta = 0;
+        public static uint bieżącyNumerKlienta = 2;
 
         public Klient() { }
         public Klient(string imie, string nazwisko, string email, string telefon, string dataUrodzenia, string pesel, Tytul tytul)
@@ -37,6 +37,18 @@ namespace ProjektHotel
             this.id = ++bieżącyNumerKlienta;
         }
 
+        public Klient(string imie, string nazwisko, string email, string telefon, string dataUrodzenia, string pesel, Tytul tytul, uint id)
+        {
+            Imie = imie;
+            Nazwisko = nazwisko;
+            Email = email;
+            Telefon = telefon;
+            DateTime.TryParse(dataUrodzenia, out this.dataUrodzenia);
+            this.Pesel = pesel;
+            this.Tytul1 = tytul;
+            this.id = id;
+        }
+
         public Klient(string imie, string nazwisko, string email, string telefon, string pesel, DateTime data, Tytul tytul1)
         {
             this.imie = imie;
@@ -46,7 +58,16 @@ namespace ProjektHotel
             this.pesel = pesel;
         }
 
-        public ulong Id { get => id; set => id = value; }
+        public Klient(string imie, string nazwisko, string email, string telefon, string pesel, DateTime data, Tytul tytul1, ulong liczbaKlientow)
+        {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.email = email;
+            this.telefon = telefon;
+            this.pesel = pesel;
+        }
+
+        public uint Id { get => id; set => id = value; }
         public string Imie
         {
             get { return imie; }

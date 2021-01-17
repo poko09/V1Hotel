@@ -10,18 +10,16 @@ namespace GUI
     public partial class Klienci : Window
     {
         ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
-        //klienci = (Klient) Klient.(); //tu właściwa ścieżka!
-        // Kontunuuj jeżeli zespół został poprawnie odczytany
-        //listBox_czlonkowie.ItemsSource = new ObservableCollection<CzlonekZespolu>(zespol.Czlonkowie);
-
+        uint klientowLiczba;
 
         public Klienci(ZarzadzanieRezerwacjami zarz)
         {
-
+            
             InitializeComponent();
             if (zarz != null)
             {
                 zarzadzanie = zarz;
+                klientowLiczba = (uint)zarzadzanie.LiczbaKlientow +1;
                 lbKlienci.ItemsSource = zarzadzanie.Klienci;
             }
         }
@@ -34,11 +32,11 @@ namespace GUI
             string telefon = tbTelefon.Text;
             string pesel = tbPesel.Text;
             DateTime data = (DateTime)dpDataUr.SelectedDate;
-            Klient.Tytul tytul = (cmbTytul.Text == "Pan") ? Klient.Tytul.Pan : Klient.Tytul.Pani;
-                        
-            Klient klienci = new Klient(imie, nazwisko, email, telefon, pesel, data, tytul);
-
+            Klient.Tytul tytul = (cmbTytul.Text == "Pan") ? Klient.Tytul.Pan : Klient.Tytul.Pani;            
+            Klient klienci = new Klient(imie, nazwisko, email, telefon, pesel, data, tytul, klientowLiczba);
             zarzadzanie.DodajKlienta(klienci);
+            klientowLiczba++;
+            lbKlienci.Items.Refresh();
         }
         public void WyczyscWszystkiePola()
         {
