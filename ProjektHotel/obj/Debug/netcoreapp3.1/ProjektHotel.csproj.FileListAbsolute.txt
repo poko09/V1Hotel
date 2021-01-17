@@ -70,3 +70,16 @@ C:\Users\wiola\source\repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\Projekt
 C:\Users\wiola\source\repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
 C:\Users\wiola\source\repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
 C:\Users\wiola\source\repos\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.genruntimeconfig.cache
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.deps.json
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.json
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.runtimeconfig.dev.json
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csprojAssemblyReference.cache
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfoInputs.cache
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.AssemblyInfo.cs
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.csproj.CoreCompileInputs.cache
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Karol\Documents\GitHub\V1Hotel\ProjektHotel\obj\Debug\netcoreapp3.1\ProjektHotel.genruntimeconfig.cache

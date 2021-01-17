@@ -106,3 +106,11 @@ C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.baml
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Klienci.baml
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.baml
 C:\Source\Repos\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.exe
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.dll
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\bin\Debug\netcoreapp3.1\ProjektHotel.pdb
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.g.cs
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.g.cs
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\DostepnoscPokoju.baml
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\Pokoje.baml
+C:\Users\Karol\Documents\GitHub\V1Hotel\GUI\obj\Debug\netcoreapp3.1\GUI.csproj.CopyComplete

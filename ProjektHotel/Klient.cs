@@ -37,6 +37,15 @@ namespace ProjektHotel
             this.id = ++bieżącyNumerKlienta;
         }
 
+        public Klient(string imie, string nazwisko, string email, string telefon, string pesel, DateTime data, Tytul tytul1)
+        {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.email = email;
+            this.telefon = telefon;
+            this.pesel = pesel;
+        }
+
         public ulong Id { get => id; set => id = value; }
         public string Imie
         {

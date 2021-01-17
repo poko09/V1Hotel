@@ -29,7 +29,7 @@ namespace ProjektHotel
 
         public void DodajKlienta(Klient klient)
         {
-            foreach (Klient klient1 in klienci)
+            foreach (Klient klient1 in Klienci)
             {
                 if (klient1.Equals(klient))
                 {
@@ -43,7 +43,7 @@ namespace ProjektHotel
 
         public void UsunKlienta(string pesel)
         {
-            foreach (Klient klient in klienci)
+            foreach (Klient klient in Klienci)
             {
                 if (klient.Pesel == pesel)
                 {

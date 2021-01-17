@@ -27,7 +27,7 @@ namespace GUI
 
         private void buttonZaloguj_Click(object sender, RoutedEventArgs e)
         {
-            if(textBoxLogin.Text=="hotel" && passwordBoxHasło.Password =="zarzadzanie")
+            if(textBoxLogin.Text=="1" && passwordBoxHasło.Password =="2")
             {
                 new StronaGłówna().Show();
                 this.Hide();
