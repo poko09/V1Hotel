@@ -115,10 +115,11 @@ namespace ProjektHotel
             else { Rezerwacje.Add(rezerwacja); }
         }*/
 
-            public void UsunRezerwacje(uint numerRezerwacji)
+        public void UsunRezerwacje(uint numerRezerwacji)
         {
-            Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
+        Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
         }
+        
 
         public void DodajPokoj(Pokoj pokoj)
         {

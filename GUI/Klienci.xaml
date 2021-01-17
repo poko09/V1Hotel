@@ -9,26 +9,27 @@
         Title="Klienci" Height="450" Width="800">
     <Grid>
         <Button x:Name="bDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="150,363,0,0" VerticalAlignment="Top" Height="30" Width="107" Click="bDodaj_Click"/>
-        <TextBox x:Name="tbImie" HorizontalAlignment="Left" Margin="170,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="27" Text="" TextChanged="tbImie_TextChanged"/>
-        <TextBox x:Name="tbNazwisko" HorizontalAlignment="Left" Margin="170,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" TextChanged="TextBox_TextChanged" Height="26"/>
+        <TextBox x:Name="tbImie" HorizontalAlignment="Left" Margin="170,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="27" Text="" />
+        <TextBox x:Name="tbNazwisko" HorizontalAlignment="Left" Margin="170,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="26"/>
         <Label x:Name="LImie" Content="Imię" HorizontalAlignment="Left" Margin="61,84,0,0" VerticalAlignment="Top" Height="27" Width="87"/>
         <Label x:Name="LNazwisko" Content="Nazwisko&#x9;" HorizontalAlignment="Left" Margin="61,123,0,0" VerticalAlignment="Top" Width="62"/>
         <Label x:Name="LEmail" Content="Email&#x9;" HorizontalAlignment="Left" Margin="61,167,0,0" VerticalAlignment="Top" Width="62"/>
         <Label x:Name="LTelefon" Content="Telefon" HorizontalAlignment="Left" Margin="61,0,0,0" VerticalAlignment="Center" Width="62"/>
         <Label x:Name="LDataUr" Content="Data  ur." HorizontalAlignment="Left" Margin="61,243,0,0" VerticalAlignment="Top" Width="62"/>
         <Label x:Name="LPesel" Content="PESEL" HorizontalAlignment="Left" Margin="61,278,0,0" VerticalAlignment="Top" Width="62"/>
-        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Margin="170,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" TextChanged="TextBox_TextChanged" Height="26"/>
-        <TextBox x:Name="tbTelefon" HorizontalAlignment="Left" Margin="170,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="87" TextChanged="TextBox_TextChanged" Height="26"/>
-        <TextBox x:Name="tbPesel" HorizontalAlignment="Left" Margin="170,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" TextChanged="TextBox_TextChanged" Height="26"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Margin="170,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="26"/>
+        <TextBox x:Name="tbTelefon" HorizontalAlignment="Left" Margin="170,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="87" Height="26"/>
+        <TextBox x:Name="tbPesel" HorizontalAlignment="Left" Margin="170,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Height="26"/>
         <DatePicker x:Name="dpDataUr" HorizontalAlignment="Left" Margin="170,243,0,0" VerticalAlignment="Top" Width="87"/>
-        <ListBox x:Name="lbRezerwacje"  BorderThickness="3,3,3,3" Margin="393,98,10,147" />
+        <ListBox x:Name="lbKlienci"  BorderThickness="3,3,3,3" Margin="393,98,10,147" />
         <Label x:Name="LKlienci" Content="Klienci:" HorizontalAlignment="Left" Margin="393,72,0,0" VerticalAlignment="Top" Width="87"/>
         <Label Content="KLIENCI" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="74" FontWeight="Bold" FontSize="16"/>
-        <ComboBox x:Name="cmbTytul" HorizontalAlignment="Left" Margin="170,323,0,0" VerticalAlignment="Top" Width="87" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox x:Name="cmbTytul" HorizontalAlignment="Left" Margin="170,323,0,0" VerticalAlignment="Top" Width="87">
             <System:String>Pan</System:String>
             <System:String>Pani</System:String>
         </ComboBox>
         <Label x:Name="LTytul" Content="Tytuł&#x9;" HorizontalAlignment="Left" Margin="61,323,0,0" VerticalAlignment="Top" Width="62"/>
+        <Button x:Name="bWyczysc" Content="Wyczyść" HorizontalAlignment="Left" Margin="305,363,0,0" VerticalAlignment="Top" Height="30" Width="107" Click="bWyczysc_Click"/>
 
     </Grid>
 </Window>

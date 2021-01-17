@@ -33,5 +33,12 @@ namespace GUI
             okno.ShowDialog();
             this.Hide();
         }
+
+        private void buttonKlienci_Click(object sender, RoutedEventArgs e)
+        {
+            Klienci okno = new Klienci(zarzadzanie);
+            okno.ShowDialog();
+
+        }
     }
 }
