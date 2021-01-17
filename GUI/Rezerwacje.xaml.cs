@@ -22,7 +22,7 @@ namespace GUI
         public Rezerwacje(ZarzadzanieRezerwacjami zarz)
         {
             InitializeComponent();
-            if (zarzadzanie != null)
+            if (zarz != null)
             {
                 zarzadzanie = zarz;
                 lbRezerwacje.ItemsSource = zarzadzanie.Rezerwacje;
@@ -34,8 +34,6 @@ namespace GUI
                 {
                     cbKlient.Items.Add(zarzadzanie.Klienci[i]);
                 }
-
-
             }
 
 
@@ -57,25 +55,23 @@ namespace GUI
             }
             else
             {
-                Rezerwacja nowaRezerwacja = new Rezerwacja();
-                //najpierw stworz zmienne i potem przekaz w konstruktorze !!!!, patrz na Wiole
-                //Rezerwacja nowaRezerwacja = new Rezerwacja((DateTime)datePickerDataZameldowania.SelectedDate,(DateTime)datePickerDataWymeldowania.SelectedDate,
-                //cbPokoj.SelectedItem as Pokoj, cbKlient.SelectedItem as Klient, cbFormaPlatnosci.SelectedItem as enum);
-                nowaRezerwacja.Klient = cbKlient.SelectedValue as Klient;
-                nowaRezerwacja.Pokoj = cbPokoj.SelectedValue as Pokoj;
-                nowaRezerwacja.DataZameldowania = (DateTime)datePickerDataZameldowania.SelectedDate;
-                nowaRezerwacja.DataWymeldowania = (DateTime)datePickerDataWymeldowania.SelectedDate;
-                nowaRezerwacja.FormaPłatności1 = (cbFormaPlatnosci.Text == "Gotówka") ? Rezerwacja.FormaPłatności.Gotówka : Rezerwacja.FormaPłatności.Karta;
-                nowaRezerwacja.Koszt = nowaRezerwacja.Pokoj.Cena * nowaRezerwacja.IleDni(nowaRezerwacja.DataZameldowania, nowaRezerwacja.DataWymeldowania);
-                nowaRezerwacja.NrRezerwacji = Rezerwacja.bieżącyNumerRezerwacji++;
-                zarzadzanie.DodajRezerwacje(nowaRezerwacja);
+                Klient nowyKlient = cbKlient.SelectedValue as Klient;
+                Pokoj nowyPokoj = cbPokoj.SelectedValue as Pokoj;
+                DateTime nowaDataZameldowania = (DateTime)datePickerDataZameldowania.SelectedDate;
+                DateTime nowaDataWymeldowania = (DateTime)datePickerDataWymeldowania.SelectedDate;
+                Rezerwacja.FormaPłatności nowaForma = (cbFormaPlatnosci.Text == "Gotówka") ? Rezerwacja.FormaPłatności.Gotówka : Rezerwacja.FormaPłatności.Karta;
+                Rezerwacja nowaRezerwacja = new Rezerwacja(nowaDataZameldowania, nowaDataWymeldowania, nowyPokoj, nowyKlient, nowaForma);
+                if (zarzadzanie.CzyDostepnyWTerminie(nowyPokoj, nowaDataZameldowania, nowaDataWymeldowania))
+                {
+                    zarzadzanie.DodajRezerwacje(nowaRezerwacja);
+                }
+                else
+                {
+                    MessageBox.Show("Wybrany pokój nie jest dostępny w tym terminie, wybierz inny pokój");
+                }
                 lbRezerwacje.Items.Refresh();
                 WyczyscWszystkiePola();
             }
-            // _rezerwacja.DataZameldowania = (DateTime)datePickerDataZameldowania.SelectedDate;
-            //_rezerwacja.DataWymeldowania = (DateTime)datePickerDataWymeldowania.SelectedDate;
-            //_rezerwacja.FormaPłatności1 = (cbFormaPlatnosci.Text == "Gotówka") ? Rezerwacja.FormaPłatności.Gotówka : Rezerwacja.FormaPłatności.Karta;
-            //funkcja z dodawaniem czlonka
         }
 
         private void ButtonClickWyczysc(object sender, RoutedEventArgs e)
@@ -91,12 +87,10 @@ namespace GUI
                 zarzadzanie.Rezerwacje.RemoveAt(index);
                 lbRezerwacje.Items.Refresh();
             }
-        }
-
-        private void ButtonZedytuj(object sender, RoutedEventArgs e)
-        {
-
+            else
+            {
+                MessageBox.Show("Zaznacz rezerwację do usunięcia");
+            }
         }
     }
 }
-
