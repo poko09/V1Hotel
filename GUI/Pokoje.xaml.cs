@@ -20,12 +20,11 @@ namespace GUI
     public partial class Pokoje : Window
     {
         ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
-        // List<Pokoj> listaPokoi = new List<Pokoj>();
 
         public Pokoje(ZarzadzanieRezerwacjami zarz)
         {
             InitializeComponent();
-            if (zarzadzanie != null)
+            if (zarz != null)
             {
                 zarzadzanie = zarz;
                 lbListaPokoi.ItemsSource = zarzadzanie.Pokoje;
@@ -38,36 +37,68 @@ namespace GUI
             cmbLiczbaMiejsc.SelectedIndex = -1;
             tbNumerPokoju.Clear();
         }
+        // TUTAJ 
         private void buttonDodajPokoj_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbLiczbaMiejsc.SelectedIndex == -1 || cmbRodzajPokoju.SelectedIndex == -1)
+            if (cmbLiczbaMiejsc.SelectedIndex == -1 || cmbRodzajPokoju.SelectedIndex == -1 || tbNumerPokoju.Text == "")
             {
-                MessageBox.Show("Musisz wybrać rodzaj pokoju oraz liczbę miejsc.");
+                MessageBox.Show("Musisz wybrać rodzaj pokoju, numer pokoju oraz liczbę miejsc.");
             }
             else
             {
                 Pokoj.Miejsce miejsce = (cmbLiczbaMiejsc.Text == "1-osobowy") ? Pokoj.Miejsce.JedenOs : (cmbLiczbaMiejsc.Text == "2-osobowy") ?
-                    Pokoj.Miejsce.DwaOs : (cmbLiczbaMiejsc.Text == "3-osobowy") ? Pokoj.Miejsce.TrzyOs : Pokoj.Miejsce.CzteryOs;
-
+                Pokoj.Miejsce.DwaOs : (cmbLiczbaMiejsc.Text == "3-osobowy") ? Pokoj.Miejsce.TrzyOs : Pokoj.Miejsce.CzteryOs;
+                int numerPokoju;
+                int.TryParse(tbNumerPokoju.Text, out numerPokoju);
+                Pokoj pokoj;
                 if (cmbRodzajPokoju.Text == "Apartament")
                 {
-                    Apartament apartament = new Apartament(miejsce);
-                    zarzadzanie.DodajPokoj(apartament);
-                    lbListaPokoi.Items.Refresh();
+                    pokoj = new Apartament(miejsce, numerPokoju);
+                }
+                else if (cmbRodzajPokoju.Text == "Pokój Premium")
+                {
+                    pokoj = new PokojPremium(miejsce, numerPokoju);
+                }
+                else
+                {
+                    pokoj = new PokojBasic(miejsce, numerPokoju);
+                }
+
+                if (zarzadzanie.CzyNumerPokojuIstnieje(pokoj))
+                {
+                    MessageBox.Show("Pokoj o podanym numerze juz istnieje.");
+                }
+                else { zarzadzanie.DodajPokoj(pokoj); }
+
+                /*if (cmbRodzajPokoju.Text == "Apartament")
+                {
+                    Apartament apartament = new Apartament(miejsce, numerPokoju);
+                    if (zarzadzanie.CzyNumerPokojuIstnieje(apartament)){
+                        MessageBox.Show("Pokoj o podanym numerze juz istnieje.");
+                    }
+                    else { zarzadzanie.DodajPokoj(apartament); }
 
                 }
                 else if (cmbRodzajPokoju.Text == "Pokój Premium")
                 {
-                    PokojPremium premium = new PokojPremium(miejsce);
-                    zarzadzanie.DodajPokoj(premium);
-                    lbListaPokoi.Items.Refresh();
+                    PokojPremium premium = new PokojPremium(miejsce, numerPokoju);
+                    if (zarzadzanie.CzyNumerPokojuIstnieje(premium))
+                    {
+                        MessageBox.Show("Pokoj o podanym numerze juz istnieje.");
+                    }
+                    else   { zarzadzanie.DodajPokoj(premium); }
                 }
                 else 
                 {
-                    PokojBasic basic = new PokojBasic(miejsce);
-                    zarzadzanie.DodajPokoj(basic);
-                    lbListaPokoi.Items.Refresh();
-                }
+                    PokojBasic basic = new PokojBasic(miejsce, numerPokoju);
+                    if (zarzadzanie.CzyNumerPokojuIstnieje(basic))
+                    {
+                        MessageBox.Show("Pokoj o podanym numerze juz istnieje.");
+                    }
+                    else
+                    { zarzadzanie.DodajPokoj(basic); }
+                }*/
+                lbListaPokoi.Items.Refresh();
                 WyczyscWszystkiePola();
             }
         }
@@ -81,13 +112,12 @@ namespace GUI
             int index = lbListaPokoi.SelectedIndex;
             if (index >= 0)
             {
-                //listaPokoi.RemoveAt(zaznaczonyPokoj);
                 zarzadzanie.Pokoje.RemoveAt(index);
                 lbListaPokoi.Items.Refresh();
             }
         }
 
-        private void buttonZedytuj_Click(object sender, RoutedEventArgs e)
+        private void buttonEdytuj_Click(object sender, RoutedEventArgs e)
         {
             int index = lbListaPokoi.SelectedIndex;
             if (index < 0)
@@ -106,42 +136,20 @@ namespace GUI
                 lbListaPokoi.Items.Refresh();
                 WyczyscWszystkiePola();
             }
-
-            /*
-            int zaznaczonyPokoj = lbListaPokoi.SelectedIndex;
-            if (zaznaczonyPokoj < 0) {
-                MessageBox.Show("Nie zaznaczyłeś/aś pokoju do zedytowania.");
-            }
-            else{
-                Pokoj.Miejsce miejsce = (cmbLiczbaMiejsc.Text == "1-osobowy") ? Pokoj.Miejsce.JedenOs : (cmbLiczbaMiejsc.Text == "2-osobowy") ?
-                Pokoj.Miejsce.DwaOs : (cmbLiczbaMiejsc.Text == "3-osobowy") ? Pokoj.Miejsce.TrzyOs : Pokoj.Miejsce.CzteryOs;
-                Pokoj pokoj;
-                if (cmbRodzajPokoju.Text == "Apartament")
-                {
-                    pokoj = new Apartament(miejsce);
-
-                }
-                else if (cmbRodzajPokoju.Text == "Pokój Premium")
-                {
-                    pokoj = new PokojPremium(miejsce);
-                }
-                else 
-                {
-                    pokoj = new PokojBasic(miejsce);
-                }
-                listaPokoi[zaznaczonyPokoj] = pokoj;
-                lista[zaznaczonyPokoj] = pokoj;
-                lbListaPokoi.ItemsSource = lista;
-            }*/
         }
 
         private void buttonSprawdzDostepnosc_Click(object sender, RoutedEventArgs e)
         {
             int index = lbListaPokoi.SelectedIndex;
-            DostepnoscPokoju okno = new DostepnoscPokoju(zarzadzanie.Pokoje[index], zarzadzanie);
-            okno.ShowDialog();
-            this.Hide();
+            if (index == -1)
+            {
+                MessageBox.Show("Nie zaznaczono pokoju z listy.");
+            }
+            else
+            {
+                DostepnoscPokoju okno = new DostepnoscPokoju(zarzadzanie.Pokoje[index], zarzadzanie);
+                okno.ShowDialog();
+            }
         }
     }
 }
-

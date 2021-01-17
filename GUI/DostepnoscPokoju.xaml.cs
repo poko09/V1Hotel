@@ -31,7 +31,7 @@ namespace GUI
 
         private void buttonWroc_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void buttonWyczysc_Click(object sender, RoutedEventArgs e)
@@ -40,18 +40,25 @@ namespace GUI
             dpDataKoncowa.SelectedDate = null;
 
         }
+
         private void buttonSprawdz_Click(object sender, RoutedEventArgs e)
         {
-            DateTime dataPoczatkowa = (DateTime)dpDataPoczatkowa.SelectedDate;
-            DateTime dataKoncowa = (DateTime)dpDataKoncowa.SelectedDate;
-            //            zarzadzanie.SprawdzDostepnoscWTerminie(apartament1, new DateTime(2020,01,27), new DateTime(2020,01,29))
-            if (zarzadzanie.CzyDostepnyWTerminie(pokoj, dataPoczatkowa, dataKoncowa))
+            if (dpDataPoczatkowa.SelectedDate == null || dpDataKoncowa.SelectedDate == null)
             {
-                MessageBox.Show("Pokój jest dostępny w wybranym terminie.");
+                MessageBox.Show("Wprowadź datę początkową oraz końcową.");
             }
             else
             {
-                MessageBox.Show("Pokój nie jest dostępny w wybranym terminie");
+                DateTime dataPoczatkowa = (DateTime)dpDataPoczatkowa.SelectedDate;
+                DateTime dataKoncowa = (DateTime)dpDataKoncowa.SelectedDate;
+                if (zarzadzanie.CzyDostepnyWTerminie(pokoj, dataPoczatkowa, dataKoncowa))
+                {
+                    MessageBox.Show("Pokój jest dostępny w wybranym terminie.");
+                }
+                else
+                {
+                    MessageBox.Show("Pokój nie jest dostępny w wybranym terminie");
+                }
             }
         }
     }

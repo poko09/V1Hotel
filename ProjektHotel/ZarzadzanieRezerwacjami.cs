@@ -54,30 +54,6 @@ namespace ProjektHotel
             }
         }
 
-        /* to chyba mozna zakomentowac bo jest interfejs
-        public bool JestKlientem(string pesel)
-        {
-            int wynik = 0;
-            foreach (Klient klient in klienci)
-            {
-                if (klient.Pesel == pesel)
-                {
-                    wynik++;
-                }
-            }
-            if (wynik == 1)
-            {
-                Console.WriteLine("jest");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("nie jest");
-                return false;
-            }
-        }
-        */
-
         public bool CzyDostepnyWTerminie(Pokoj pokoj, DateTime dataPoczatkowa, DateTime dataKoncowa)
         {
             if (Rezerwacje.Exists(x => (x.Pokoj.Equals(pokoj)       //x.Pokoj == pokoj
@@ -108,29 +84,32 @@ namespace ProjektHotel
 
         }
 
-        /*
-        public void DodajRezerwacje(Rezerwacja rezerwacja)
-        {
-            if (Rezerwacje.Exists(x => x.NrRezerwacji == rezerwacja.NrRezerwacji))
-            {
-                throw new Exception("Rezerwacja o podanym numerze już istenieje.");
-            }
-            else if (CzyDostepnyWTerminie(rezerwacja.Pokoj, rezerwacja.DataZameldowania, rezerwacja.DataWymeldowania))
-            {
-                throw new Exception("Pokoj jest juz zarezerwowany w danym terminie.");
-            }
-            else { Rezerwacje.Add(rezerwacja); }
-        }*/
-
         public void UsunRezerwacje(uint numerRezerwacji)
         {
             Rezerwacje.RemoveAll(x => x.NrRezerwacji == numerRezerwacji);
         }
 
+        public bool CzyNumerPokojuIstnieje(Pokoj pokoj)
+        {
+            if (Pokoje.Exists(x => x.NrPokoju == pokoj.NrPokoju))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+
         public void DodajPokoj(Pokoj pokoj)
         {
-            pokoje.Add(pokoj);
+            if (CzyNumerPokojuIstnieje(pokoj))
+            {
+                throw new Exception("Pokoj o danym numerze juz istnieje");
+            }
+            else
+            {
+                pokoje.Add(pokoj);
+            }
         }
+
         public void UsunPokoj(uint NrPokoju)
         {
             foreach(Pokoj pokoj in Pokoje)
@@ -170,9 +149,6 @@ namespace ProjektHotel
             klienci.Sort();
         }
 
-        ///// TERAZ KAROL ROBI COS W SWOJEJ BRANCHY 
-        /////ASDASDAS
-        ///
 
         static Type[] types = new Type[] { typeof(Apartament), typeof(PokojBasic), typeof(PokojPremium) };
         public void ZapiszXML(string nazwa)

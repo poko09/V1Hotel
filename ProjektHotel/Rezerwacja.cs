@@ -38,6 +38,17 @@ namespace ProjektHotel
             this.koszt = pokoj.Cena * IleDni(this.dataZameldowania,this.dataWymeldowania);
         }
 
+        public Rezerwacja(uint nrRezerwacji, DateTime dataZameldowania, DateTime dataWymeldowania, Pokoj pokoj, Klient klient, FormaPłatności formaPłatności)
+        {
+            this.nrRezerwacji = nrRezerwacji;
+            this.dataZameldowania = dataZameldowania;
+            this.dataWymeldowania = dataWymeldowania;
+            this.pokoj = pokoj;
+            this.klient = klient;
+            this.formaPłatności = formaPłatności;
+            this.koszt = pokoj.Cena * IleDni(this.dataZameldowania, this.dataWymeldowania);
+        }
+
         public int IleDni(DateTime dataZameldowania, DateTime dataWymeldowania)
         {
             int dni = 0;

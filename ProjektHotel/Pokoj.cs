@@ -6,8 +6,9 @@ using System.Text;
 namespace ProjektHotel
 {
     [Serializable]
-    public abstract class Pokoj
+    public abstract class Pokoj : IEquatable<Pokoj>
     {
+
 
         uint nrPokoju;
         double cena;
@@ -27,6 +28,17 @@ namespace ProjektHotel
             this.Miejsce1 = miejsce;
             this.NrPokoju = ++bieżącyNumerPokoju;
         }
+        public Pokoj(Miejsce miejsce, int numerPokoju)
+        {
+            this.Miejsce1 = miejsce;
+            this.NrPokoju = (uint)numerPokoju;
+        }
+
+        public bool Equals(Pokoj other)
+        {
+            return (this.NrPokoju == other.NrPokoju && this.Miejsce1 == other.Miejsce1 && this.GetType() == other.GetType());
+        }
+
         public override string ToString()
         {
             return "Nr pokoju: " + NrPokoju + ", Ilość osób: " + this.Miejsce1.ToString();

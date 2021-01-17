@@ -19,12 +19,14 @@ namespace GUI
     public partial class Rezerwacje : Window
     {
         ZarzadzanieRezerwacjami zarzadzanie = new ZarzadzanieRezerwacjami();
+        uint liczbaRezerwacjiWpliku;
         public Rezerwacje(ZarzadzanieRezerwacjami zarz)
         {
             InitializeComponent();
             if (zarz != null)
             {
                 zarzadzanie = zarz;
+                liczbaRezerwacjiWpliku = (uint)zarzadzanie.Rezerwacje.Count + 1;
                 lbRezerwacje.ItemsSource = zarzadzanie.Rezerwacje;
                 for (int i = 0; i < zarzadzanie.Pokoje.Count; i++)
                 {
@@ -60,10 +62,11 @@ namespace GUI
                 DateTime nowaDataZameldowania = (DateTime)datePickerDataZameldowania.SelectedDate;
                 DateTime nowaDataWymeldowania = (DateTime)datePickerDataWymeldowania.SelectedDate;
                 Rezerwacja.FormaPłatności nowaForma = (cbFormaPlatnosci.Text == "Gotówka") ? Rezerwacja.FormaPłatności.Gotówka : Rezerwacja.FormaPłatności.Karta;
-                Rezerwacja nowaRezerwacja = new Rezerwacja(nowaDataZameldowania, nowaDataWymeldowania, nowyPokoj, nowyKlient, nowaForma);
+                Rezerwacja nowaRezerwacja = new Rezerwacja(liczbaRezerwacjiWpliku, nowaDataZameldowania, nowaDataWymeldowania, nowyPokoj, nowyKlient, nowaForma);
                 if (zarzadzanie.CzyDostepnyWTerminie(nowyPokoj, nowaDataZameldowania, nowaDataWymeldowania))
                 {
                     zarzadzanie.DodajRezerwacje(nowaRezerwacja);
+                    liczbaRezerwacjiWpliku++;
                 }
                 else
                 {

@@ -15,6 +15,12 @@ namespace ProjektHotel
         {
             this.Cena = Stawka * (int)Miejsce1;
         }
+
+        public Apartament(Miejsce miejsce, int numerPokoju) : base(miejsce, numerPokoju)
+        {
+            this.Cena = Stawka * (int)Miejsce1;
+        }
+
         public static double Stawka { get => stawka; set => value = stawka; }
 
         public override string ToString()

@@ -15,6 +15,11 @@ namespace ProjektHotel
             this.Cena = Stawka * (int)Miejsce1;
         }
 
+        public PokojBasic(Miejsce miejsce, int numerPokoju) : base(miejsce, numerPokoju)
+        {
+            this.Cena = Stawka * (int)Miejsce1;
+        }
+
         public override string ToString()
         {
             return base.ToString() + ", Typ pokoju: " + nameof(PokojBasic) +", Cena za dobę: " + this.Cena;
